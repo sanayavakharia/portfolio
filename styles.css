@@ -70,7 +70,7 @@ section {
 #about .profile-pic img {
     border-radius: 50%;
     width: 150px;
-    height: 150px;
+    height: auto;
 }
 
 #about h1 {
