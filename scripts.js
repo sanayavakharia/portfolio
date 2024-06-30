@@ -1,6 +1,16 @@
-// Example: Simple alert on page load
-window.onload = function() {
-    alert("Welcome to my portfolio!");
-};
+document.addEventListener('DOMContentLoaded', (event) => {
+    const textElement = document.querySelector('#about p');
+    const text = textElement.textContent;
+    textElement.textContent = '';
 
-// Add more interactivity as needed
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);  // Adjust typing speed here
+        }
+    }
+    
+    type();
+});
