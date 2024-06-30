@@ -41,7 +41,7 @@ section {
 }
 
 #about {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #d4a5e3, #b3cde3);
     color: #fff;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
@@ -49,7 +49,7 @@ section {
 
 #about:hover {
     transform: scale(1.05);
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    background: linear-gradient(to right, #c193d2, #99c2d9);
 }
 
 #about h1 {
@@ -62,8 +62,8 @@ section {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 0.15em solid orange;
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    border-right: 0.15em solid #e6b8f2;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -73,7 +73,7 @@ section {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: #e6b8f2; }
 }
 
 #education, #experience, #leadership, #skills, #contact {
@@ -96,11 +96,11 @@ ul {
 }
 
 a {
-    color: #ff7e5f;
+    color: #d4a5e3;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #feb47b;
+    color: #b3cde3;
 }

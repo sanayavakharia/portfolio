@@ -1,14 +1,29 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const textElement = document.querySelector('#about p');
-    const text = textElement.textContent;
-    textElement.textContent = '';
+    const aboutSection = document.querySelector('#about');
+    const paragraphs = aboutSection.querySelectorAll('p');
+    
+    let textArray = [];
+    paragraphs.forEach(p => {
+        textArray.push(p.textContent);
+        p.textContent = '';
+    });
 
     let index = 0;
+    let paragraphIndex = 0;
+
     function type() {
-        if (index < text.length) {
-            textElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 100);  // Adjust typing speed here
+        if (paragraphIndex < textArray.length) {
+            if (index < textArray[paragraphIndex].length) {
+                paragraphs[paragraphIndex].textContent += textArray[paragraphIndex].charAt(index);
+                index++;
+                setTimeout(type, 25);  // Adjust typing speed here
+            } else {
+                index = 0;
+                paragraphIndex++;
+                if (paragraphIndex < textArray.length) {
+                    setTimeout(type, 100);  // Pause before starting next paragraph
+                }
+            }
         }
     }
     
