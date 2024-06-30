@@ -35,8 +35,8 @@ nav ul li a {
 }
 
 section {
-    padding: 4rem;
-    margin: 2rem 0;
+    padding: 2rem;
+    margin: 1rem 0;
     text-align: center;
 }
 
@@ -45,11 +45,32 @@ section {
     color: #fff;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
 }
 
 #about:hover {
     transform: scale(1.05);
     background: linear-gradient(to right, #c193d2, #99c2d9);
+}
+
+#about .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .profile-pic {
+    margin-bottom: 1rem;
+}
+
+#about .profile-pic img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 #about h1 {
@@ -59,25 +80,10 @@ section {
 
 #about p {
     font-size: 1.2rem;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 0.15em solid #e6b8f2;
-    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #e6b8f2; }
 }
 
 #education, #experience, #leadership, #skills, #contact {
-    background: #ebe4f5;
+    background: #f4f4f4;
     border-radius: 10px;
 }
 
