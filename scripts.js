@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             if (index < textArray[paragraphIndex].length) {
                 paragraphs[paragraphIndex].textContent += textArray[paragraphIndex].charAt(index);
                 index++;
-                setTimeout(type, 25);  // Adjust typing speed here
+                setTimeout(type, 50);  // Adjust typing speed here
             } else {
                 index = 0;
                 paragraphIndex++;
