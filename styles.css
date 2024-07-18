@@ -22,7 +22,7 @@ header {/* Reset some basic styles */
     body {
         font-family: 'Playfair Display', serif;
         line-height: 1.6;
-        background: #424242;
+        background: #eee;
         color: #333;
     }
     
@@ -92,7 +92,7 @@ header {/* Reset some basic styles */
     }
     
     #education, #experience, #leadership, #skills, #contact {
-        background: #424242;
+        background: #f4f4f4;
         border-radius: 10px;
         box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
     }
@@ -138,7 +138,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #424242;
+    color: #fff;
     text-decoration: none;
 }
 
