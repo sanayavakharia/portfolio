@@ -8,7 +8,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: #fff;
+    background: #cdcdcd;
     color: #333;
 }
 
@@ -27,7 +27,7 @@ header {/* Reset some basic styles */
     }
     
     header {
-        background: #444;
+        background: #1c1c1c;
         color: #ddd;
         padding: 1rem 0;
         text-align: center;
@@ -55,8 +55,8 @@ header {/* Reset some basic styles */
     }
     
     #about {
-        background: linear-gradient(to right, #8a2387, #e94057, #f27121);
-        color: #fff;
+        background: linear-gradient(to right, #2e2e2e, #2e2e2e);
+        color: #424242;
         border-radius: 10px;
         box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
         display: flex;
@@ -149,8 +149,8 @@ section {
 }
 
 #about {
-    background: linear-gradient(to right, #d4a5e3, #b3cde3);
-    color: #fff;
+    background: linear-gradient(to right, #343434, #343434);
+    color: #6d8ab8;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     display: flex;
