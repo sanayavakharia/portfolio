@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const aboutSection = document.querySelector('#about');
-    const paragraphs = aboutSection.querySelectorAll('p');
+    const mainSection = document.querySelector('#main');
+    const paragraphs = mainSection.querySelectorAll('p');
     
     let textArray = [];
     paragraphs.forEach(p => {
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             if (index < textArray[paragraphIndex].length) {
                 paragraphs[paragraphIndex].textContent += textArray[paragraphIndex].charAt(index);
                 index++;
-                setTimeout(type, 50);  // Adjust typing speed here
+                setTimeout(type, 35);  // Adjust typing speed here
             } else {
                 index = 0;
                 paragraphIndex++;
                 if (paragraphIndex < textArray.length) {
-                    setTimeout(type, 100);  // Pause before starting next paragraph
+                    setTimeout(type, 35);  // Pause before starting next paragraph
                 }
             }
         }

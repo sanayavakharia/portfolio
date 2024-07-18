@@ -8,7 +8,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: #cdcdcd;
+    background: #343434;
     color: #333;
 }
 
@@ -22,7 +22,7 @@ header {/* Reset some basic styles */
     body {
         font-family: 'Playfair Display', serif;
         line-height: 1.6;
-        background: #eee;
+        background: #424242;
         color: #333;
     }
     
@@ -54,7 +54,7 @@ header {/* Reset some basic styles */
         text-align: center;
     }
     
-    #about {
+    #main {
         background: linear-gradient(to right, #2e2e2e, #2e2e2e);
         color: #424242;
         border-radius: 10px;
@@ -65,34 +65,34 @@ header {/* Reset some basic styles */
         padding: 2rem;
     }
     
-    #about .about-container {
+    #main .main-container {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
     
-    #about .profile-pic {
+    #main .profile-pic {
         margin-right: 2rem;
     }
     
-    #about .profile-pic img {
+    #main .profile-pic img {
         border-radius: 50%;
         width: 200px; /* Increased size */
         height: auto;
         box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
     }
     
-    #about h1 {
+    #main h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
     }
     
-    #about p {
+    #main p {
         font-size: 1.2rem;
     }
     
     #education, #experience, #leadership, #skills, #contact {
-        background: #f4f4f4;
+        background: #424242;
         border-radius: 10px;
         box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
     }
@@ -118,7 +118,7 @@ header {/* Reset some basic styles */
     }
     
     a:hover {
-        color: #f27121;
+        color: #6d8ab8;
     }
     
     background: #333;
@@ -138,7 +138,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #424242;
     text-decoration: none;
 }
 
@@ -148,10 +148,9 @@ section {
     text-align: center;
 }
 
-#about {
+#main {
     background: linear-gradient(to right, #343434, #343434);
     color: #6d8ab8;
-    border-radius: 10px;
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     display: flex;
     justify-content: center;
@@ -160,33 +159,29 @@ section {
     padding: 2rem;
 }
 
-#about:hover {
-    transform: scale(1.05);
-    background: linear-gradient(to right, #c193d2, #99c2d9);
-}
 
-#about .about-container {
+#main .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#about .profile-pic {
+#main .profile-pic {
     margin-bottom: 1rem;
 }
 
-#about .profile-pic img {
+#main .profile-pic img {
     border-radius: 50%;
     width: 150px;
     height: auto;
 }
 
-#about h1 {
+#main h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-#about p {
+#main p {
     font-size: 1.2rem;
 }
 
@@ -216,5 +211,5 @@ a {
 }
 
 a:hover {
-    color: #b3cde3;
+    color: #6d8ab8;
 }
