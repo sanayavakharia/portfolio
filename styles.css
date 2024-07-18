@@ -8,123 +8,20 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: #343434;
+    background: #fff; /* White background */
     color: #333;
+    padding-top: 60px; /* Add padding to prevent content from being hidden behind the fixed header */
 }
 
-header {/* Reset some basic styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Playfair Display', serif;
-        line-height: 1.6;
-        background: #eee;
-        color: #333;
-    }
-    
-    header {
-        background: #1c1c1c;
-        color: #ddd;
-        padding: 1rem 0;
-        text-align: center;
-    }
-    
-    nav ul {
-        list-style: none;
-        text-align: center;
-    }
-    
-    nav ul li {
-        display: inline;
-        margin: 0 10px;
-    }
-    
-    nav ul li a {
-        color: #ddd;
-        text-decoration: none;
-    }
-    
-    section {
-        padding: 2rem;
-        margin: 1rem 0;
-        text-align: center;
-    }
-    
-    #main {
-        background: linear-gradient(to right, #2e2e2e, #2e2e2e);
-        color: #424242;
-        border-radius: 10px;
-        box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding: 2rem;
-    }
-    
-    #main .main-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    #main .profile-pic {
-        margin-right: 2rem;
-    }
-    
-    #main .profile-pic img {
-        border-radius: 50%;
-        width: 200px; /* Increased size */
-        height: auto;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
-    }
-    
-    #main h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    
-    #main p {
-        font-size: 1.2rem;
-    }
-    
-    #education, #experience, #leadership, #skills, #contact {
-        background: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-    }
-    
-    h1, h2 {
-        margin-bottom: 1rem;
-    }
-    
-    p {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-    }
-    
-    ul {
-        padding-left: 20px;
-        text-align: left;
-    }
-    
-    a {
-        color: #e94057;
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-    }
-    
-    a:hover {
-        color: #6d8ab8;
-    }
-    
-    background: #333;
-    color: #fff;
+header {
+    background: #1c1c1c;
+    color: #ddd;
     padding: 1rem 0;
     text-align: center;
+    position: fixed; /* Fix the header at the top */
+    width: 100%; /* Ensure it spans the full width of the screen */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it is above other content */
 }
 
 nav ul {
@@ -138,78 +35,146 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ddd;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #92a0f1;
 }
 
 section {
-    padding: 2rem;
-    margin: 1rem 0;
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
     text-align: center;
 }
 
 #main {
-    background: linear-gradient(to right, #343434, #343434);
-    color: #6d8ab8;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
+    padding: 6rem 2rem; /* Increase top padding */
+    text-align: center;
 }
-
 
 #main .main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Align items in a row */
     align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #e0ecf9a7;
 }
 
 #main .profile-pic {
-    margin-bottom: 1rem;
+    margin-right: 3rem; /* Space between the image and the text */
 }
 
 #main .profile-pic img {
-    border-radius: 50%;
-    width: 150px;
-    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    width: 400px; /* Increase image size */
+    height: auto; /* Ensure aspect ratio is maintained */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+}
+
+#main .about-text {
+    text-align: left; /* Align text to the left */
 }
 
 #main h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Increase font size */
     margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange; /* Cursor effect */
+    animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
 }
 
 #main p {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
 }
 
-#education, #experience, #leadership, #skills, #contact {
-    background: #f4f4f4;
-    border-radius: 10px;
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #6d8ab8;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.profile-pic-square {
+    margin-right: 3rem;
+}
+
+.profile-pic-square img {
+    border-radius: 5px;
+    width: 300px; /* Set the size of the square photo */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 h1, h2 {
     margin-bottom: 1rem;
+    color: #333;
 }
 
 p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    color: #333;
 }
 
 ul {
     padding-left: 20px;
     text-align: left;
+    color: #333;
 }
 
 a {
-    color: #d4a5e3;
+    color: #6d8ab8;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #6d8ab8;
+    color: #92a0f1;
 }
