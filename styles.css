@@ -12,7 +12,115 @@ body {
     color: #333;
 }
 
-header {
+header {/* Reset some basic styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Playfair Display', serif;
+        line-height: 1.6;
+        background: #eee;
+        color: #333;
+    }
+    
+    header {
+        background: #444;
+        color: #ddd;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        color: #ddd;
+        text-decoration: none;
+    }
+    
+    section {
+        padding: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    
+    #about {
+        background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 2rem;
+    }
+    
+    #about .about-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    #about .profile-pic {
+        margin-right: 2rem;
+    }
+    
+    #about .profile-pic img {
+        border-radius: 50%;
+        width: 200px; /* Increased size */
+        height: auto;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    }
+    
+    #about h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    #about p {
+        font-size: 1.2rem;
+    }
+    
+    #education, #experience, #leadership, #skills, #contact {
+        background: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    h1, h2 {
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+    
+    ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+    
+    a {
+        color: #e94057;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    a:hover {
+        color: #f27121;
+    }
+    
     background: #333;
     color: #fff;
     padding: 1rem 0;
