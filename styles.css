@@ -2,15 +2,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Gill Sans Extrabold", serif;
     line-height: 1.6;
-    background: #fff; /* White background */
+    background: #fff; 
     color: #333;
-    padding-top: 60px; /* Add padding to prevent content from being hidden behind the fixed header */
+    padding-top: 60px; 
 }
 
 header {
@@ -51,6 +51,13 @@ section {
     text-align: center;
 }
 
+h2 {
+    color: rgb(30, 30, 30); /* Sets the color of all h2 elements to red */
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: left; /* Ensures all h2 tags are aligned to the left */
+    margin-bottom: 20px; /* Provides spacing below each h2 element */
+}
+
 #main {
     padding: 6rem 8rem; /* Increase top padding */
     text-align: center;
@@ -58,7 +65,7 @@ section {
     background-size: cover; /* Ensure the image covers the section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 #main .main-container {
@@ -67,7 +74,7 @@ section {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.891); /* Semi-transparent background to make text readable */
 }
@@ -77,14 +84,14 @@ section {
 }
 
 #main .profile-pic img {
-    border-radius: 10px; /* Rounded corners */
-    width: 400px; /* Increase image size */
+    border-radius: 4px; /* Rounded corners */
+    width: 300px; /* Increase image size */
     height: auto; /* Ensure aspect ratio is maintained */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.424);
 }
 
 #main .about-text {
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
 }
 
 #main h1 {
@@ -92,12 +99,12 @@ section {
     margin-bottom: 1rem;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid orange; /* Cursor effect */
+    border-right: .15em solid #2d4c9a;
     animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
 }
 
 #main p {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
 }
 
 /* Typing effect */
@@ -109,7 +116,7 @@ section {
 /* Blinking cursor */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: orange; }
+    50% { border-color: rgb(86, 174, 199); }
 }
 
 .social-icons {
@@ -150,7 +157,7 @@ section {
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .about-text p {
@@ -160,11 +167,11 @@ section {
 
 h1, h2 {
     margin-bottom: 1rem;
-    color: #333;
+    color: #2c2c2c;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
@@ -184,47 +191,54 @@ a:hover {
     color: #92a0f1;
 }
 
+
 .experience-item {
     background-color: #f7f7f7;
-    border-left: 4px solid #628efb;
-    padding: 1.5rem;
-    margin-bottom: 0.75rem;
-    border-radius: 8px;
+    border-left: 3px solid #2d4c9a;
+    padding: 1rem;
+    margin-bottom: 10px; /* Decreased to reduce the gap */
+    border-radius: 0px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.048);
 }
 
 .experience-header {
-    display: flex;
+    display: inline-block;
     align-items: center;
     margin-bottom: 1rem;
 }
 
 .experience-logo {
-    width: 60px; /* Set the size of the logo */
-    height: 60px; /* Set the size of the logo */
+    width: 50px; /* Set the size of the logo */
+    height: 50px; /* Set the size of the logo */
     margin-right: 1rem;
 }
 
+.experience h2 {
+    font-size: 1.2rem;
+    color: #444445;
+    margin-bottom: 0.25rem;
+}
+
 .experience-item h3 {
-    font-size: 1.5rem;
-    color: #363636;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #2d4c9a;
+    margin-bottom: 0.25rem;
 }
 
 .experience-item p {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .experience-item ul {
     list-style: disc;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .experience-item ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     color: #555;
 }
 
@@ -235,9 +249,143 @@ a:hover {
 
     .experience-item p {
         font-size: 1.1rem;
+        color:  #000000;
     }
 
     .experience-item ul {
         padding-left: 2rem;
     }
 }
+
+#activities {
+    padding: 4rem 2rem;
+    margin-top: 10px; /* Decreased to reduce the gap */
+    margin-bottom: 2rem; /* Maintain consistency */
+    max-width: 1200px;
+    text-align: left;
+}
+
+#activities h2 {
+    color: rgb(30, 30, 30); /* Sets the color of all h2 elements to red */
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.activities-container {
+    background-color: #f7f7f7;
+    border-left: 3px solid #2d4c9a;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.048);
+}
+
+.activities-header {
+    display: block;
+    align-items: center;
+    margin-bottom: 0rem;
+}
+
+.activities-logo {
+    width: 50px; /* Set the size of the logo */
+    height: 50px; /* Set the size of the logo */
+    margin-right: 1rem;
+}
+
+.activities-header h3 {
+    font-size: 1.5rem;
+    color: #2d4c9a;
+}
+
+.activities-header p {
+    font-size: 1rem;
+    color: #343434;
+}
+
+.activities-container ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.activities-container ul li {
+    margin-bottom: 0.25rem;
+    color: #1d1c1c;
+}
+
+@media (min-width: 768px) {
+    .activities-header h3 {
+        font-size: 1.75rem;
+    }
+
+    .activities-container p, .activities-container ul li {
+        font-size: 1.1rem;
+    }
+}
+
+#contact {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c2c2c;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.contact-item .text {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #a5aceb;
+    transition: color 0.0s ease-in-out;
+    text-decoration: underline;
+}
+
+.download-resume {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2d4c9a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block; /* Needed to make the <a> tag behave like a button */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.download-resume:hover {
+    background-color: #1a3365;
+}
+
+
