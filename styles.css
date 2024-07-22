@@ -97,6 +97,7 @@ h2 {
 #main h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    padding: 2rem;
     white-space: nowrap;
     overflow: hidden;
     border-right: .15em solid #2d4c9a;
