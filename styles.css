@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body {
@@ -14,14 +14,18 @@ body {
 }
 
 header {
-    background: #363636ec;
+    background: #363636;
     color: #ddd;
     padding: 1rem 0;
     text-align: center;
     position: fixed;
+    /* Fix the header at the top */
     width: 100%;
+    /* Ensure it spans the full width of the screen */
     top: 0;
+    /* Position it at the top */
     z-index: 1000;
+    /* Ensure it is above other content */
 }
 
 nav ul {
@@ -41,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6a7ad4;
+    color: #92a0f1;
 }
 
 section {
@@ -66,7 +70,7 @@ h2 {
     padding: 6rem 8rem;
     /* Increase top padding */
     text-align: center;
-    background-image: url('images/sd.png');
+    background-image: url('sd.png');
     /* Add the background image */
     background-size: cover;
     /* Ensure the image covers the section */
@@ -412,15 +416,17 @@ a:hover {
 }
 
 .contact-item a {
-    color: #000000;
+    color: #2d4c9a;
     text-decoration: none;
     align-items: center;
 }
 
-.contact-item a:hover {
-    color: #2d4c9a;
+contact-item a:hover {
     text-decoration: underline;
-    transition: color 0.0s ease-in-out;
+}
+
+.resume-container {
+    margin-top: 2rem;
 }
 
 .download-resume-container {
@@ -430,47 +436,18 @@ a:hover {
 }
 
 .download-resume {
-    padding: 8px 10px;
+    padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #323131;
+    background-color: #2d4c9a;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0s;
+    transition: background-color 0.3s;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 10px;
 }
 
 .download-resume:hover {
-    background-color: #363636;
-}
-
-.resume-container {
-    margin-top: 2rem;
-}
-
-@media (max-width: 767px) {
-    .main-container, .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic, .profile-pic-square {
-        margin: 0 0 1rem 0;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .experience-header, .activities-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .experience-logo, .activities-logo {
-        margin: 0 auto 1rem auto;
-    }
+    background-color: #1a3365;
 }
