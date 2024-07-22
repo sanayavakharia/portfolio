@@ -220,17 +220,48 @@
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span class="text"><a href="https://github.com/sanayavakharia" target="_blank">github.com/sanayavakharia</a></span>
             </div>
-        </span>
-    </div>
-</div>
-<div class="download-resume-container">
-    <a href="Resume.pdf" class="download-resume" download>Download Resume</a>
-</div>
+        </div>
+        <div class="download-resume-container">
+            <a href="Resume.pdf" class="download-resume" download>Download Resume</a>
         </div>
         <div class="resume-container">
             <iframe src="Resume.pdf" width="100%" height="600px"></iframe>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const mainSection = document.querySelector('#main');
+            const paragraphs = mainSection.querySelectorAll('p');
+
+            let textArray = [];
+            paragraphs.forEach(p => {
+                textArray.push(p.textContent);
+                p.textContent = '';
+            });
+
+            let index = 0;
+            let paragraphIndex = 0;
+
+            function type() {
+                if (paragraphIndex < textArray.length) {
+                    if (index < textArray[paragraphIndex].length) {
+                        paragraphs[paragraphIndex].textContent += textArray[paragraphIndex].charAt(index);
+                        index++;
+                        setTimeout(type, 35); // Adjust typing speed here
+                    } else {
+                        index = 0;
+                        paragraphIndex++;
+                        if (paragraphIndex < textArray.length) {
+                            setTimeout(type, 35); // Pause before starting next paragraph
+                        }
+                    }
+                }
+            }
+
+            type();
+        });
+    </script>
 </body>
 
 </html>

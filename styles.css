@@ -19,13 +19,9 @@ header {
     padding: 1rem 0;
     text-align: center;
     position: fixed;
-    /* Fix the header at the top */
     width: 100%;
-    /* Ensure it spans the full width of the screen */
     top: 0;
-    /* Position it at the top */
     z-index: 1000;
-    /* Ensure it is above other content */
 }
 
 nav ul {
@@ -57,66 +53,49 @@ section {
 
 h2 {
     color: rgb(30, 30, 30);
-    /* Sets the color of all h2 elements to red */
     font-size: 2rem;
-    /* Adjust font size as needed */
     text-align: left;
-    /* Ensures all h2 tags are aligned to the left */
     margin-bottom: 20px;
-    /* Provides spacing below each h2 element */
 }
 
 #main {
     padding: 6rem 8rem;
-    /* Increase top padding */
     text-align: center;
     background-image: url('sd.png');
-    /* Add the background image */
     background-size: cover;
-    /* Ensure the image covers the section */
     background-position: center;
-    /* Center the background image */
     background-repeat: no-repeat;
-    /* Prevent the background image from repeating */
     border-radius: 0px;
 }
 
 #main .main-container {
     display: flex;
     flex-direction: row;
-    /* Align items in a row */
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
     border-radius: 4px;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.891);
-    /* Semi-transparent background to make text readable */
 }
 
 #main .profile-pic {
     margin-right: 3rem;
-    /* Space between the image and the text */
 }
 
 #main .profile-pic img {
     border-radius: 4px;
-    /* Rounded corners */
     width: 300px;
-    /* Increase image size */
     height: auto;
-    /* Ensure aspect ratio is maintained */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.424);
 }
 
 #main .about-text {
     text-align: center;
-    /* Align text to the left */
 }
 
 #main h1 {
     font-size: 3rem;
-    /* Increase font size */
     margin-bottom: 1rem;
     white-space: nowrap;
     overflow: hidden;
@@ -141,7 +120,6 @@ h2 {
 
 /* Blinking cursor */
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent;
@@ -185,7 +163,6 @@ h2 {
 .profile-pic-square img {
     border-radius: 5px;
     width: 300px;
-    /* Set the size of the square photo */
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
 }
@@ -231,7 +208,6 @@ a:hover {
     border-left: 3px solid #2d4c9a;
     padding: 1rem;
     margin-bottom: 10px;
-    /* Decreased to reduce the gap */
     border-radius: 0px;
     text-align: left;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.048);
@@ -245,9 +221,7 @@ a:hover {
 
 .experience-logo {
     width: 50px;
-    /* Set the size of the logo */
     height: 50px;
-    /* Set the size of the logo */
     margin-right: 1rem;
 }
 
@@ -296,34 +270,16 @@ a:hover {
     white-space: nowrap;
 }
 
-@media (min-width: 768px) {
-    .experience-item h3 {
-        font-size: 1.75rem;
-    }
-
-    .experience-item p {
-        font-size: 1.1rem;
-        color: #000000;
-    }
-
-    .experience-item ul {
-        padding-left: 2rem;
-    }
-}
-
 #activities {
     padding: 2rem 2rem;
     margin-top: 10px;
-    /* Decreased to reduce the gap */
     margin-bottom: 2rem;
-    /* Maintain consistency */
     max-width: 1200px;
     text-align: left;
 }
 
 #activities h2 {
     color: rgb(30, 30, 30);
-    /* Sets the color of all h2 elements to red */
     font-size: 2rem;
     text-align: left;
     margin-bottom: 20px;
@@ -346,9 +302,7 @@ a:hover {
 
 .activities-logo {
     width: 50px;
-    /* Set the size of the logo */
     height: 50px;
-    /* Set the size of the logo */
     margin-right: 1rem;
 }
 
@@ -370,17 +324,6 @@ a:hover {
 .activities-container ul li {
     margin-bottom: 0.25rem;
     color: #1d1c1c;
-}
-
-@media (min-width: 768px) {
-    .activities-header h3 {
-        font-size: 1.75rem;
-    }
-
-    .activities-container p,
-    .activities-container ul li {
-        font-size: 1.1rem;
-    }
 }
 
 #contact {
@@ -421,7 +364,7 @@ a:hover {
     align-items: center;
 }
 
-contact-item a:hover {
+.contact-item a:hover {
     text-decoration: underline;
 }
 
@@ -449,5 +392,55 @@ contact-item a:hover {
 }
 
 .download-resume:hover {
-    background-color: #1a3365;
+    background-color: #393939;
+    transition: background-color 0.3s;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    #main {
+        padding: 4rem 1rem; /* Reduce padding for smaller screens */
+    }
+    #main .main-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    #main .profile-pic {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Add margin below the image */
+    }
+    #main .profile-pic img {
+        width: 100%; /* Make image responsive */
+    }
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text for smaller screens */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    .profile-pic-square {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Add margin below the image */
+    }
+    .profile-pic-square img {
+        width: 100%; /* Make image responsive */
+    }
+    section {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    }
+    .experience-item {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    .skills-used {
+        justify-content: center; /* Center skills on smaller screens */
+    }
+    #activities {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    }
+    .activities-container {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+    .contact-container {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
 }
