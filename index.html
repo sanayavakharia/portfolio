@@ -1,269 +1,177 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanaya Vakharia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="ICON.png" type="image/x-icon"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanaya Vakharia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #F6F3EC;
+      color: #282720;
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 35px 6%;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: #77756E;
+    }
+
+    .dot {
+      height: 7px;
+      width: 7px;
+      background: #873D48;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 750px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #873D48;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 27px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(75px, 12vw, 150px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -4px;
+    }
+
+    h1 span {
+      display: block;
+      color: #873D48;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .description {
+      margin-top: 35px;
+      max-width: 460px;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #77756E;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #DDD9CF;
+      padding-top: 22px;
+      font-size: 11px;
+      color: #77756E;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 25px;
+      }
+
+      .status {
+        font-size: 8px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+        font-size: clamp(60px, 13vw, 90px);
+      }
+
+      .description {
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page">
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#main">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="name">Sanaya Vakharia.</div>
+
+      <div class="status">
+        <span class="dot"></span>
+        WORK IN PROGRESS
+      </div>
     </header>
 
-    <section id="main">
-        <div class="main-container">
-            <div class="profile-pic">
-                <img src="profile.jpg" alt="Sanaya Vakharia">
-            </div>
-            <div class="about-text">
-                <h1 id="main-title">Sanaya Vakharia</h1>
-                <p>Mathematics-Computer Science w/ Business Economics @ UC San Diego 🔱 </p>
-                <p>Data Analyst & ML Intern @ Seagate Technology</p>
-                <div class="social-icons">
-                    <a href="https://github.com/sanayavakharia" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/sanaya27" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+      <p class="eyebrow">A LITTLE REDESIGN IN PROGRESS</p>
 
-    <section id="about">
-        <div class="about-container">
-            <div class="profile-pic-square">
-                <img src="skate.jpg" alt="Sanaya Vakharia">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>Hello! I'm Sanaya Vakharia, a rising junior at UC San Diego, where I am majoring in Math-CS and minoring in Business Economics. My passion lies at the intersection of technology, innovation, and societal betterment. I am deeply fascinated by the transformative power of machine learning and the art of crafting intuitive and engaging user experiences through UI/UX design.</p>
-                <p>Beyond the realm of technology, I have a keen interest in entrepreneurship and business, constantly seeking ways to blend my technical acumen with business insights to create impactful and meaningful solutions. I aspire to leverage my diverse skill set to drive positive change and contribute to a brighter, more innovative future.</p>
-                <p>Apart from my career and academic pursuits, I am also an athlete and have been a speed skater for the past 15 years. Speed skating is a huge part of who I am, shaping my discipline, resilience, and drive for excellence. I have won several national championships and proudly placed third at the Flanders Grand Prix in Belgium. This athletic journey has been instrumental in teaching me the value of perseverance, hard work, and the pursuit of personal and professional goals.</p>
-            </div>
-        </div>
-    </section>
+      <h1>
+        Currently
+        <span>building.</span>
+      </h1>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <img src="seagate.png" alt="Seagate Logo" class="experience-logo">
-                <div>
-                    <h3>Seagate Technology</h3>
-                    <h4><em>Data Analysis & ML Intern | May 2024 - Present</em></h4>
-                    <p>Fremont, California, United States · Remote</p>
-                </div>
-                <div class="skills-used">
-                    <span class="skill">Python</span>
-                    <span class="skill">Apache Spark</span>
-                    <span class="skill">Airflow</span>
-                    <span class="skill">Data Migration</span>
-                    <span class="skill">Large Language Models (LLM)</span>
-                    <span class="skill">Chatbot Development</span>
-                </div>
-            </div>
-            <ul>
-                <li>I am a Data Analysis and Engineering Intern at Seagate Technology. I will be focusing on leveraging Apache Spark and Airflow to enhance data migration.</li>
-                <li>I will also be working with the Big Data, AI and Analysis team to develop a Seagate AI generative chatbot.</li>
-            </ul>
-        </div>
+      <p class="description">
+        My little corner of the internet is getting a refresh.
+        I'm putting together a space for the things I've worked on,
+        the ideas I'm exploring, and whatever comes next.
+      </p>
+    </main>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <img src="cocreate.webp" alt="CoCreate Logo" class="experience-logo">
-                <div>
-                    <h3>CoCreate x Spykar</h3>
-                    <h4><em>Machine Learning Engineer | July 2024 - Present</em></h4>
-                    <p>Mumbai, India · Hybrid</p>
-                </div>
-                <div class="skills-used">
-                    <span class="skill">Machine Learning</span>
-                    <span class="skill">Artificial Intelligence</span>
-                    <span class="skill">UI/UX Design</span>
-                    <span class="skill">Digital Asset Management (DAM)</span>
-                </div>
-            </div>
-            <ul>
-                <li>I am involved in the development of an LLM-based multimodal kiosk aimed at enhancing engagement during dealers' meets. My responsibilities include:</li>
-                <li>Designing and implementing a kiosk capable of voice and visual interactions.</li>
-                <li>Enabling user interaction through natural language processing to display and detail products.</li>
-                <li>Integrating a QR code interface for mobile access and interaction.</li>
-                <li>Customizing user experiences by showing product information, pricing, and recommendations based on dealer data and CRM inputs.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <img src="cses.jpeg" alt="CSES Logo" class="experience-logo">
-                <div>
-                    <h3>Computer Science and Engineering Society @ UCSD</h3>
-                    <h4><em>Pro-Dev Event Chair | October 2023 - April 2024</em></h4>
-                    <p>La Jolla, California, United States</p>
-                </div>
-                <div class="skills-used">
-                    <span class="skill">Networking</span>
-                </div>
-            </div>
-            <ul>
-                <li>Connected with industry professionals for events.</li>
-                <li>Organized events, workshops, and panels.</li>
-                <li>Facilitated opportunities for skill development and career growth.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <div>
-                    <h3>WE Application LLP</h3>
-                    <h4><em>Assistant Software Engineer | May 2019 - May 2022</em></h4>
-                    <p>Pune, India · Hybrid</p>
-                </div>
-                <div class="skills-used">
-                    <span class="skill">UI/UX Design</span>
-                    <span class="skill">Front-End Development</span>
-                    <span class="skill">Figma</span>
-                    <span class="skill">Entrepreneurship</span>
-                    <span class="skill">Prototyping</span>
-                </div>
-            </div>
-            <ul>
-                <li>Developed and conducted testing for user interface (UI) and user experience (UX) designs, enhancing app accessibility and user satisfaction.</li>
-                <li>Innovated by proposing two key features, subsequently adopted and integrated into the final app release, significantly improving functionality.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <img src="exile.jpeg" alt="EXILE Jeans Logo" class="experience-logo">
-                <div>
-                    <h3>EXILE Jeans</h3>
-                    <h4><em>Software Engineer | June 2021 - August 2021</em></h4>
-                    <p>Mumbai, India · On-site</p>
-                </div>
-                <div class="skills-used">
-                    <span class="skill">MySQL</span>
-                    <span class="skill">Java</span>
-                    <span class="skill">.NET</span>
-                </div>
-            </div>
-            <ul>
-                <li>Built a database using .NET and Java with MySQL.</li>
-                <li>The database automated orders placed by distributors.</li>
-                <li>Prevented manual reconciliation and data entry errors.</li>
-            </ul>
-        </div>
-    </section>
+    <footer>
+      <span>© 2026 Sanaya Vakharia</span>
+      <span>More soon. ✳</span>
+    </footer>
 
-    <section id="activities">
-        <h2>Activities</h2>
-        <div class="activities-container">
-            <div class="activities-header">
-                <img src="guardian.jpeg" alt="Guardian Logo" class="activities-logo">
-                <div>
-                    <h3>UCSD Guardian Newspaper</h3>
-                    <h4><em>Associate Editor, Sports Section | June 2023 - June 2024 | San Diego, CA</em></h4>
-                </div>
-            </div>
-            <ul>
-                <li>Conduct post-game interviews with athletes and coaches in collaboration with the ESPN team.</li>
-                <li>Appoint articles to writers and manage the editorial calendar.</li>
-                <li>Write and edit articles for publication in the Sports section.</li>
-            </ul>
-            <div class="activities-header">
-                <div>
-                    <h4><em>Writer, Sports Section | Jan 2023 - Present | San Diego, CA</em></h4>
-                </div>
-            </div>
-            <ul>
-                <li>Analyze NCAA Division 1 Athletics and write detailed articles for the official college newspaper of UCSD.</li>
-                <li>Conduct post-game interviews with athletes and coaches to provide in-depth coverage of sports events.</li>
-            </ul>
-            <div class="activities-header">
-                <img src="rsfi.jpg" alt="RSFI Logo" class="activities-logo">
-                <h3>Speed Skating</h3>
-            </div>
-            <ul>
-                <li><strong>Ranked #1 skater nationally U/16 F</strong> (AISM Nationals, 2019) [National]</li>
-                <li><strong>Overall National Championship Trophy, 2019:</strong> Won 4/4 Gold Medals at the AISM National Championship [National]</li>
-                <li><strong>Golden Skate Award, 2021-22:</strong> Awarded to 1 skater from the state of Maharashtra for consistent wins for 5 years in the State Championship and representation at the National Championships [State]</li>
-                <li><strong>RSFI State Championship, 2020-21:</strong> Gold: 100m Sprint, 1000m; Silver: 500m [State]</li>
-                <li>Selected for the <strong>Indian Team Trials, 2020</strong>. (Cancelled due to COVID) [National]</li>
-                <li><strong>National Record Holder:</strong> 300m Time Trial [National]</li>
-                <li><strong>Flanders Grand Prix, Belgium:</strong> 3rd Place in 3 races [International]</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            <div class="contact-item">
-                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                <span class="text"><a href="mailto:svakharia@ucsd.edu">svakharia@ucsd.edu</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="icon"><i class="fas fa-phone"></i></span>
-                <span class="text">+1 (619) 951-8431</span>
-            </div>
-            <div class="contact-item">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-                <span class="text"><a href="https://linkedin.com/in/sanayavakharia" target="_blank">linkedin.com/in/sanayavakharia</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span class="text"><a href="https://github.com/sanayavakharia" target="_blank">github.com/sanayavakharia</a></span>
-            </div>
-        </div>
-        <div class="download-resume-container">
-            <a href="resume1.pdf" class="download-resume" download>Download Resume</a>
-        </div>
-        <div class="resume-container">
-            <iframe src="Resume.pdf" width="100%" height="600px"></iframe>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const mainSection = document.querySelector('#main');
-            const paragraphs = mainSection.querySelectorAll('p');
-
-            let textArray = [];
-            paragraphs.forEach(p => {
-                textArray.push(p.textContent);
-                p.textContent = '';
-            });
-
-            let index = 0;
-            let paragraphIndex = 0;
-
-            function type() {
-                if (paragraphIndex < textArray.length) {
-                    if (index < textArray[paragraphIndex].length) {
-                        paragraphs[paragraphIndex].textContent += textArray[paragraphIndex].charAt(index);
-                        index++;
-                        setTimeout(type, 35); // Adjust typing speed here
-                    } else {
-                        index = 0;
-                        paragraphIndex++;
-                        if (paragraphIndex < textArray.length) {
-                            setTimeout(type, 35); // Pause before starting next paragraph
-                        }
-                    }
-                }
-            }
-
-            type();
-        });
-    </script>
+  </div>
 </body>
-
 </html>
