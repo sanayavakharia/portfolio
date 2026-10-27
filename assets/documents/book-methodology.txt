@@ -1,0 +1,60 @@
+Task 1: Read Prediction
+
+Baseline Approach
+
+Methodology:
+Followed the approach outlined in baselines.py, which predicts whether a user would read a book based on its popularity.
+
+Steps:
+Calculated a popularity threshold using the top 50% of book interactions in the training data.
+
+For test pairs:
+Predicted 1 (indicating the user would read the book) if the book's popularity exceeded the threshold.
+Predicted 0 otherwise.
+
+Improved Model
+Objective: Enhance prediction accuracy by incorporating additional user and book features.
+
+Methodology:
+Trained a logistic regression model with the following features:
+User Read Count: Total number of books the user has read.
+Book Popularity: Total number of times each book has been read.
+Logistic regression was chosen as a simple and effective classification model for binary prediction tasks.
+The model was trained on features extracted from the training data and used to predict read actions for test pairs in pairs_Read.csv.
+
+Task 2: Rating Prediction
+
+Baseline Approach
+
+Methodology:
+Used the global average rating as the default prediction.
+Enhanced this by incorporating user-specific averages:
+If the user had historical ratings in the training data, their average rating was used instead of the global average.
+This approach accounts for user-level biases and provides a straightforward baseline.
+
+Improved Model
+Objective: Improve prediction accuracy by modeling latent user-book interactions.
+Methodology:
+Implemented Matrix Factorization with Singular Value Decomposition (SVD) to decompose the user-book interaction matrix into latent factors.
+Steps:
+Set the number of latent factors (k) to 20 to balance model complexity and performance.
+Latent factors represent hidden characteristics of users and books, enabling personalized predictions.
+Incorporated user and book biases implicitly through the latent factor decomposition.
+For test pairs in pairs_Rating.csv:
+Predicted ratings using the decomposed matrix when user and book data were available.
+Defaulted to global or user-specific average ratings as fallback for unseen users or books.
+
+Summary
+
+Baseline Models
+Provided a solid starting point for understanding the dataset and tasks.
+Focused on simple heuristics like popularity thresholds for read prediction and global/user averages for rating prediction.
+
+Enhanced Models
+Read Prediction:
+Used logistic regression with user and book features, providing a more nuanced approach than the popularity threshold.
+Rating Prediction:
+Leveraged matrix factorization (SVD) for collaborative filtering, capturing user preferences and book characteristics.
+Improved generalization to unseen user-book pairs by introducing latent factors.
+
+These improvements address key limitations in the baselines, balancing interpretability with predictive accuracy. The combination of feature engineering and collaborative filtering provides robust predictions for both tasks.
