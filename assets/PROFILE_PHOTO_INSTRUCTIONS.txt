@@ -1,0 +1,1 @@
+Add your portrait as assets/profile.jpg to replace the elegant SV placeholder. Suggested portrait crop: 3:4 vertical.
